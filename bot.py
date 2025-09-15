@@ -77,15 +77,18 @@ def main() -> None:
     # Add error handler
     application.add_error_handler(error_handler)
 
-    # Start the bot with webhook for Koyeb deployment
+    # Use a simple webhook path without the token in URL for better compatibility
+    webhook_path = "/webhook"
+    webhook_url = f"https://my-tg-bot.koyeb.app{webhook_path}"
+    
     logger.info(f"Starting webhook server on port {PORT}")
-    logger.info(f"Webhook URL: https://my-tg-bot.koyeb.app/{BOT_TOKEN}")
+    logger.info(f"Webhook URL: {webhook_url}")
     
     application.run_webhook(
         listen="0.0.0.0",
         port=PORT,
-        webhook_url=f"https://my-tg-bot.koyeb.app/7633130326:AAFPxQDHHsIfP427ylAuoIFPu9UvZqjIP5M",
-        url_path=f"/{BOT_TOKEN}",
+        webhook_url=webhook_url,
+        url_path=webhook_path,
         drop_pending_updates=True
     )
 
