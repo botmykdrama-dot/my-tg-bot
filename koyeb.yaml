@@ -1,0 +1,21 @@
+version: "1"
+name: sinhala-ocr-bot
+
+services:
+  - name: sinhala-ocr-bot
+    type: web
+    build:
+      type: docker
+      dockerfile: Dockerfile
+    instance_type: nano
+    ports:
+      - port: 8000
+        protocol: http
+    env:
+      - name: TELEGRAM_BOT_TOKEN
+        value: ${TELEGRAM_BOT_TOKEN}
+    regions:
+      - fra
+    scaling:
+      min: 1
+      max: 1
