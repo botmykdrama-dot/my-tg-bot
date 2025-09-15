@@ -14,11 +14,12 @@ Available commands:
 /start - Show this welcome message
 /help - Get detailed help information
 /ping - Check if bot is alive
+/info - Bot and user information
 
 ✨ Features:
-- Echo messages back to you
-- Responds to all text messages
-- Deployed on Koyeb platform
+• Echo messages back to you
+• Responds to all text messages
+• Deployed on Koyeb platform
 
 Just send me any text and I'll echo it back! 📝
     """
