@@ -81,8 +81,8 @@ def main() -> None:
     application.run_webhook(
         listen="0.0.0.0",
         port=PORT,
-        webhook_url=f"https://your-app-name.koyeb.app/{BOT_TOKEN}",
-        url_path=f"/{BOT_TOKEN}",
+        webhook_url=f"https://my-tg-bot.koyeb.app/7633130326:AAFPxQDHHsIfP427ylAuoIFPu9UvZqjIP5M",
+        url_path=f"/7633130326:AAFPxQDHHsIfP427ylAuoIFPu9UvZqjIP5M",
         drop_pending_updates=True
     )
 
