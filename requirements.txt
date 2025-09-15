@@ -1,1 +1,1 @@
-python-telegram-bot[https://my-tg-bot.koyeb.app/7633130326:AAFPxQDHHsIfP427ylAuoIFPu9UvZqjIP5M]==20.7
+python-telegram-bot==20.7
