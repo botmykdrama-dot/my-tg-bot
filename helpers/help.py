@@ -13,12 +13,13 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 /start - Show welcome message and basic info
 /help - Display this detailed help guide  
 /ping - Health check (responds with Pong!)
+/info - Bot and user information
 
 *✨ Bot Features:*
-- Echo messages back to you
-- Responds to all text messages instantly
-- Deployed on Koyeb cloud platform
-- Uses polling for reliable message delivery
+• Echo messages back to you
+• Responds to all text messages instantly
+• Deployed on Koyeb cloud platform
+• Uses polling for reliable message delivery
 
 *💬 How to Use:*
 1. Send any of the commands above
@@ -26,10 +27,10 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 3. The bot is always listening and ready to respond
 
 *🔧 Technical Info:*
-- Built with python-telegram-bot library
-- Running on Koyeb serverless platform
-- Uses secure polling method for updates
-- Handles errors gracefully with logging
+• Built with python-telegram-bot library
+• Running on Koyeb serverless platform
+• Uses secure polling method for updates
+• Handles errors gracefully with logging
 
 *📞 Support:*
 If you experience any issues, the bot logs all activities for troubleshooting.
@@ -49,24 +50,24 @@ async def info_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 📊 *Bot Information*
 
 *User Details:*
-- Name: {user.first_name} {user.last_name or ''}
-- Username: @{user.username or 'Not set'}
-- User ID: `{user.id}`
+• Name: {user.first_name} {user.last_name or ''}
+• Username: @{user.username or 'Not set'}
+• User ID: `{user.id}`
 
 *Chat Details:*
-- Chat Type: {chat.type}
-- Chat ID: `{chat.id}`
+• Chat Type: {chat.type}
+• Chat ID: `{chat.id}`
 
 *Bot Status:*
-- Status: ✅ Online and Active
-- Platform: Koyeb Cloud
-- Method: Polling
-- Response Time: Fast
+• Status: ✅ Online and Active
+• Platform: Koyeb Cloud
+• Method: Polling
+• Response Time: Fast
 
 *Server Info:*
-- Uptime: Running continuously
-- Last Update: Just now
-- Performance: Optimal
+• Uptime: Running continuously
+• Last Update: Just now
+• Performance: Optimal
     """
     
     await update.message.reply_text(info_text.strip(), parse_mode='Markdown')
