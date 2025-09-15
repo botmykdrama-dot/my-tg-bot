@@ -82,7 +82,7 @@ def main() -> None:
         listen="0.0.0.0",
         port=PORT,
         webhook_url=f"https://my-tg-bot.koyeb.app/7633130326:AAFPxQDHHsIfP427ylAuoIFPu9UvZqjIP5M",
-        url_path=f"/7633130326:AAFPxQDHHsIfP427ylAuoIFPu9UvZqjIP5M",
+        url_path=f"/{BOT_TOKEN}",
         drop_pending_updates=True
     )
 
