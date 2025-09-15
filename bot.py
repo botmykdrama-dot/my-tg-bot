@@ -77,18 +77,16 @@ def main() -> None:
     # Add error handler
     application.add_error_handler(error_handler)
 
-    # Use a simple webhook path without the token in URL for better compatibility
-    webhook_path = "/webhook"
-    webhook_url = f"https://my-tg-bot.koyeb.app{webhook_path}"
-    
-    logger.info(f"Starting webhook server on port {PORT}")
-    logger.info(f"Webhook URL: {webhook_url}")
-    
-    application.run_webhook(
-        listen="0.0.0.0",
-        port=PORT,
-        webhook_url=webhook_url,
-        url_path=webhook_path,
+    # Use polling instead of webhooks - more reliable for testing
+    logger.info("Starting bot with polling...")
+    application.run_polling(
+        poll_interval=1.0,
+        timeout=10,
+        bootstrap_retries=-1,
+        read_timeout=30,
+        write_timeout=30,
+        connect_timeout=30,
+        pool_timeout=30,
         drop_pending_updates=True
     )
 
